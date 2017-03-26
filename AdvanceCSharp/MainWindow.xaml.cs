@@ -24,5 +24,14 @@ namespace AdvanceCSharp
         {
             InitializeComponent();
         }
+
+        private int Add(int a , int b)
+        {
+            return a + b;
+        }
+        private void Print(int res)
+        {
+            Result.Content = res;
+        }
     }
 }
