@@ -23,6 +23,8 @@ namespace AdvanceCSharp
         public MainWindow()
         {
             InitializeComponent();
+            Action<int> ActionExample = new Action<int>(Print);
+            ActionExample(5);
         }
 
         private int Add(int a , int b)
