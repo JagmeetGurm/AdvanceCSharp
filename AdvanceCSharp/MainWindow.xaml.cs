@@ -23,6 +23,18 @@ namespace AdvanceCSharp
         public MainWindow()
         {
             InitializeComponent();
+            //action example: always returns void and is a delegate(function pointer).
+            Action<int> ActionExample = new Action<int>(Print);
+            // ActionExample(5);
+
+            //Func example
+            Func<int, int, int> FuncExample = new Func<int, int, int>(Add);
+            FuncExample(4, 5);
+            ActionExample(result);
+
+            //Predicate Example
+            Predicate<int> PredicateExample = new Predicate<int>(Greater);
+            Result.Content = PredicateExample(8);
 
             printName userName;
             printName fName = new printName(FirstName);
@@ -56,6 +68,21 @@ namespace AdvanceCSharp
         public string PrintUserName()
         {
             return FName + " " + LName;
+        }
+        private int result;
+        private int Add(int a, int b)
+        {
+            result = a + b;
+            return result;
+        }
+        private void Print(int res)
+        {
+            Result.Content = res;
+        }
+
+        private bool Greater(int val1)
+        {
+            return val1 > result;
         }
     }
 }
