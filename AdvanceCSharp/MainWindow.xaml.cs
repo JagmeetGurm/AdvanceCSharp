@@ -23,6 +23,35 @@ namespace AdvanceCSharp
         public MainWindow()
         {
             InitializeComponent();
+
+            printName fName = new printName(FirstName);
+            printName lName = new printName(LastName);
+            fName("Jagmeet");
+            lName("Gurm");
+           Result.Content = PrintUserName();
+
+
+
+        }
+        private string LName;
+        private string FName;
+        //delegate
+        public delegate string printName(string name);
+
+        public string FirstName(string firstName)
+        {
+            FName = firstName;
+            return FName;
+        }
+        public string LastName(string lastName)
+        {
+            LName = lastName;
+            return LName;
+        }
+
+        public string PrintUserName()
+        {
+            return FName + " " + LName;
         }
     }
 }
