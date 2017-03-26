@@ -25,14 +25,18 @@ namespace AdvanceCSharp
             InitializeComponent();
             //action example: always returns void and is a delegate(function pointer).
             Action<int> ActionExample = new Action<int>(Print);
-            ActionExample(5);
+           // ActionExample(5);
 
-            //
+            //Func example
+            Func<int, int, int> FuncExample = new Func<int, int, int>(Add);
+            FuncExample(4, 5);
+            ActionExample(result);
         }
-
+        private int result;
         private int Add(int a , int b)
         {
-            return a + b;
+            result = a + b;
+            return result;
         }
         private void Print(int res)
         {
