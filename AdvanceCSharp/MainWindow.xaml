@@ -3,6 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel>
+            <Label Name='Result'></Label>
+            <Button Name="BtnResult">Click Me!</Button>
+        </StackPanel>
     </Grid>
 </Window>
