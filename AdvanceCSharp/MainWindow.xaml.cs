@@ -23,8 +23,11 @@ namespace AdvanceCSharp
         public MainWindow()
         {
             InitializeComponent();
+            //action example: always returns void and is a delegate(function pointer).
             Action<int> ActionExample = new Action<int>(Print);
             ActionExample(5);
+
+            //
         }
 
         private int Add(int a , int b)
