@@ -24,10 +24,12 @@ namespace AdvanceCSharp
         {
             InitializeComponent();
 
+            printName userName;
             printName fName = new printName(FirstName);
             printName lName = new printName(LastName);
-            fName("Jagmeet");
-            lName("Gurm");
+            userName = fName;
+            userName += lName;
+            userName("Jim");
            Result.Content = PrintUserName();
 
 
