@@ -29,8 +29,10 @@ namespace AdvanceCSharp
             printName lName = new printName(LastName);
             userName = fName;
             userName += lName;
-            userName("Jim");
-           Result.Content = PrintUserName();
+            //userName("JIm");
+            BtnResult.Click += new RoutedEventHandler((object obj, RoutedEventArgs e) => { fName("Jim"); });
+            BtnResult.Click += new RoutedEventHandler((object obj, RoutedEventArgs e) => { lName("Gurm"); });
+            BtnResult.Click += new RoutedEventHandler((object obj, RoutedEventArgs e) => { Result.Content = PrintUserName(); });
 
 
 
