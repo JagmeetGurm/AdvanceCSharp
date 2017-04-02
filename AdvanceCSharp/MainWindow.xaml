@@ -4,6 +4,8 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <StackPanel>
+            <TextBox Text="{Binding TestStudent.FirstName}"/>
+            <TextBox Text="{Binding TestStudent.LastName}"/>
             <Label Name='Result'></Label>
             <Button Name="BtnResult">Click Me!</Button>
         </StackPanel>

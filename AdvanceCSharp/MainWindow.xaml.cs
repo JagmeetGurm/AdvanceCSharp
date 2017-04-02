@@ -23,6 +23,8 @@ namespace AdvanceCSharp
         public MainWindow()
         {
             InitializeComponent();
+            
+
             //action example: always returns void and is a delegate(function pointer).
             Action<int> ActionExample = new Action<int>(Print);
            // ActionExample(5);
@@ -34,7 +36,7 @@ namespace AdvanceCSharp
 
             //Predicate Example
             Predicate<int> PredicateExample = new Predicate<int>(Greater);
-            Result.Content =  PredicateExample(8);
+        //    Result.Content =  PredicateExample(8);
           
 
         }
@@ -46,7 +48,7 @@ namespace AdvanceCSharp
         }
         private void Print(int res)
         {
-            Result.Content = res;
+       //     Result.Content = res;
         }
         
         private bool Greater(int val1)
