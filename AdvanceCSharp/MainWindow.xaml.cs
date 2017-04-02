@@ -23,7 +23,7 @@ namespace AdvanceCSharp
         public MainWindow()
         {
             InitializeComponent();
-            
+            this.DataContext = new MainWindowViewModel();
 
             //action example: always returns void and is a delegate(function pointer).
             Action<int> ActionExample = new Action<int>(Print);
