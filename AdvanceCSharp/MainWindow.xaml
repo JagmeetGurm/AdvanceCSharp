@@ -4,9 +4,9 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <StackPanel>
-            <TextBox Text="{Binding Model.FirstName}"/>
-            <TextBox Text="{Binding Model.LastName}"/>
-            <TextBox Text="{Binding Model.Age}"/>
+            <TextBox Text="{Binding Model.FirstName, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox Text="{Binding Model.LastName, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox Text="{Binding Model.Age, UpdateSourceTrigger=LostFocus}"/>
             <Label Name='Result'></Label>
             <Button Name="BtnResult" Command="{Binding TestCommand}">Click Me!</Button>
         </StackPanel>
