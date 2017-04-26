@@ -2,10 +2,32 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <StackPanel>
-            <Label Name='Result'></Label>
-            <Button Name="BtnResult">Click Me!</Button>
-        </StackPanel>
-    </Grid>
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    </Window.Resources>
+    <StackPanel>
+        <ItemsControl ItemsSource="{Binding Persons}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Expander Grid.Row="0" Header="Name" Grid.Column="0"  >
+                            <StackPanel>
+                                <Label Grid.Column="1" Content="{Binding FName}"/>
+                                <Label Content="{Binding LName}" />
+                                <Label Content="{Binding Age}"/>
+                            </StackPanel>
+                        </Expander>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
 </Window>
