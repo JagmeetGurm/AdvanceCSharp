@@ -29,6 +29,12 @@ namespace AdvanceCSharp
         {
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var temp = First.Text;
+            var temp2 = Last.Text;
+        }
         
     }
 }
