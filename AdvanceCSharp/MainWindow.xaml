@@ -3,9 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <StackPanel>
-            <Label Name='Result'></Label>
-            <Button Name="BtnResult">Click Me!</Button>
-        </StackPanel>
+        <TextBox Text="{Binding PhNo}" VerticalContentAlignment="Center"  Width="250" HorizontalAlignment="Left" x:Name="SearchTermTextBox" Margin="5,5,0,270.8"/>
+        <TextBlock IsHitTestVisible="False" Text="Enter Search Term Here" Padding="10"  HorizontalAlignment="Left" Margin="10,0,0,270.8" Foreground="DarkGray" Width="245">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+       
     </Grid>
 </Window>
