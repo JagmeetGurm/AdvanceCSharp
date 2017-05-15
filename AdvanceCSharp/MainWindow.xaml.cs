@@ -23,6 +23,7 @@ namespace AdvanceCSharp
         public MainWindow()
         {
             InitializeComponent();
+            var caller = new CallerFilePathTest("Jagmeet");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
