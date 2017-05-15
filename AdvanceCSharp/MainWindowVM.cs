@@ -16,7 +16,8 @@ namespace AdvanceCSharp
             Persons.Add(new Person { FirstName = "Jim", LastName = "Gill", age = 20 });
             Persons.Add(new Person { FirstName = "Joe", LastName = "John", age = 24 });
             Persons.Add(new Person { FirstName = "Anmol", LastName = "Anand", age = 38 });
-
+            var temp = Persons.Where(p => p.FirstName == "Jim");
+            var temp2 = temp.Count();
         }
 
         private List<Person> _persons;
