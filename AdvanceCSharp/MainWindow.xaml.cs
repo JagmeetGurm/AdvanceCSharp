@@ -34,9 +34,9 @@ namespace AdvanceCSharp
 
             //Predicate Example
             Predicate<int> PredicateExample = new Predicate<int>(Greater);
-            Result.Content =  PredicateExample(8);
-          
+           // Result.Content =  PredicateExample(8);
 
+            DataContext = new MainWindowVM();
         }
         private int result;
         private int Add(int a , int b)
