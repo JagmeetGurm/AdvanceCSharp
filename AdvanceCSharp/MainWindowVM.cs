@@ -12,7 +12,11 @@ namespace AdvanceCSharp
         public MainWindowVM()
         {
             Persons = new List<Person>();
-            
+            Persons.Add(new Person{FirstName = "Jagmeet", LastName ="Gurm", age = 28});
+            Persons.Add(new Person { FirstName = "Jim", LastName = "Gill", age = 20 });
+            Persons.Add(new Person { FirstName = "Joe", LastName = "John", age = 24 });
+            Persons.Add(new Person { FirstName = "Anmol", LastName = "Anand", age = 38 });
+
         }
 
         private List<Person> _persons;
