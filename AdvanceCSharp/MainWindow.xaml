@@ -1,11 +1,26 @@
 ﻿<Window x:Class="AdvanceCSharp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="150" Width="525">
     <Grid>
-        <StackPanel>
-            <Label Name='Result'></Label>
-            <Button Name="BtnResult">Click Me!</Button>
-        </StackPanel>
+            <ScrollViewer >
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Name='Result'></Label>
+                    <Button Grid.Row="1" Name="BtnResult">Click Me!</Button>
+                    <Button Grid.Row="2" Name="BtnResult2">Click Me!</Button>
+                    <Button Grid.Row="3" Name="BtnResult3">Click Me!</Button>
+                    <Button Grid.Row="4" Name="BtnResult4">Click Me!</Button>
+                    <Button Grid.Row="5" Name="BtnResult5">Click Me!</Button>
+                    <Button Grid.Row="6" Name="BtnResult6">Click Me!</Button>
+                </Grid>
+            </ScrollViewer>
     </Grid>
 </Window>
