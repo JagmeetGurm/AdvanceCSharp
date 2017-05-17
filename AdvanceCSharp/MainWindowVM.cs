@@ -21,6 +21,12 @@ namespace AdvanceCSharp
             var temp2 = temp.Count();
         }
 
+        private int _sliderValue;
+        public int SliderValue
+        {
+            get { return _sliderValue; }
+            set { _sliderValue = value; OnPropertyChanged("SliderValue"); }
+        }
         private List<Person> _persons;
         public List<Person> Persons
         {
